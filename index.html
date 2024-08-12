@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="master.css">
+    <title>مستند</title>
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2 >المعالجة القاعدية </h2>
+            <p>نظام إدارة المنتجات</p>
+        </div>
+        <div class="inputs">
+            <input type="text" placeholder="العنوان" id="العنوان">
+            <div class="price">
+                <input onkeyup="احسب_الإجمالي()" type="number" placeholder="السعر" id="السعر">
+                <input onkeyup="احسب_الإجمالي()" type="number" placeholder="الضرائب" id="الضرائب">
+                <input onkeyup="احسب_الإجمالي()" type="number" placeholder="الإعلانات" id="الإعلانات">
+                <input onkeyup="احسب_الإجمالي()" type="number" placeholder="الخصم" id="الخصم">
+                <small id="الإجمالي" class="total1">total:</small>
+            </div>
+            <input type="number" placeholder="العدد" id="العدد">
+            <input type="text" placeholder="الفئة" id="الفئة">
+            <button id="الإرسال">إنشاء</button>
+        </div>
+        <div class="outputs">
+            <div class="searchblock">
+                <input onkeyup="بحث_البيانات(this.value)" type="text" id="بحث" placeholder="البحث">
+                <div class="btnsearch">
+                    <button onclick="اختيار_نوع_البحث(this.id)" id="بحث_عن_العنوان">البحث حسب العنوان</button>
+                    <button onclick="اختيار_نوع_البحث(this.id)" id="بحث_عن_الفئة">البحث حسب الفئة</button>
+                </div>
+            </div>
+            <div id="حذف_الكل"></div>
+            <table>
+                <tr>
+                    <th>الرقم التسلسلي</th>
+                    <th>العنوان</th>
+                    <th>السعر</th>
+                    <th>الضرائب</th>
+                    <th>الإعلانات</th>
+                    <th>الخصم</th>
+                    <th>الإجمالي</th>
+                    <th>الفئة</th>
+                    <th>التحديث</th>
+                    <th>الحذف</th>
+                </tr>
+                <tbody id="الجسم">
+                    <td>1</td>
+                    <td>سامسونج</td>
+                    <td>2000</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>2100</td>
+                    <td>هاتف</td>
+                    <td><button id="تحديث">تحديث</button></td>
+                    <td><button id="حذف">حذف</button></td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
